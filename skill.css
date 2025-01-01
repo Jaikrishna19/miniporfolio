@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showright 1s ease forwards;
+    animation-delay: .4s;
+
+}
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: 35px;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color:  #C99F76;
+
+}
+
+.netflix{
+    width: 150px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.netflix span{
+    width: 50px;
+    height: 0;
+    background-color: #df0707;
+    position: absolute;
+}
+.left{
+    left: 0;
+    bottom: 0;
+    animation: anim 1s linear forwards;
+    animation-delay: 1s;
+}
+.center{
+    top: 0;
+    left: 0;
+    transform: skewX(22deg);
+    transform-origin: top left;
+    box-shadow: 0 0 50px black;
+    z-index: 2;
+    animation: anim 1s linear forwards;
+    animation-delay: 2s;
+}
+.right{
+    right: 0;
+    bottom: 0;
+    animation: anim 1s linear forwards;
+    animation-delay: 3s;
+}
+
+/* For curve bottom */
+.netflix::after{
+    content: '';
+    width: 120%;
+    height: 20px;
+    border-radius: 50%;
+    background: black;
+    position: absolute;
+    left: -10%;
+    bottom: -10px;
+    z-index: 5;
+
+}
+
+@keyframes anim{
+    100%{
+        height: 100%;
+    }
+}
+
+@keyframes showright {
+    100% {
+     width: 0;
+    }
+ }

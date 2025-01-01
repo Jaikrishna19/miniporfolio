@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+body{
+    color: white;
+    
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showright 1s ease forwards;
+    animation-delay: .4s;
+
+}
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: 35px;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color:  #C99F76;
+
+}
+
+.home{
+    height: 100vh;
+    display: flex;
+    background: url(krishimage.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 10%;
+}
+
+.home-content{
+    max-width: 600px;
+}
+
+.home-content h1{
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showright 1s ease forwards;
+    animation-delay: 1.3s;
+
+}
+
+
+.home-content h3{
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #C99F76;
+}
+
+.home-content h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showright 1s ease forwards;
+    animation-delay: 1.6s;
+
+}
+
+
+.home-content p{
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showright 1s ease forwards;
+    animation-delay: 1.9s;
+
+}
+
+
+.home-content .lets{
+    position: relative;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    
+}
+
+.home-content .lets::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showright 1s ease forwards;
+    animation-delay: 2.2s;
+    z-index: 2;
+
+}
+
+
+.lets a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    background: #C99F76;
+    border: 2px solid #C99F76;
+    border-radius: 9px;
+    font-size: 19px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.lets a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: black;
+    z-index: -1;
+    transition: .5s;
+}
+
+.lets a:hover{
+    color: #C99F76 ;
+}
+
+.lets a:hover::before {
+    width: 100%;
+}
+
+.icons{
+    position: absolute;
+    bottom: 40px;
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showright 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 2;
+
+}
+
+
+.icons a {
+    position: relative;
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #C99F76;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #C99F76;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.icons a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background:#C99F76;
+    z-index: -1;
+    transition: .5s;
+}
+
+.icons a:hover{
+    color: black;
+}
+
+.icons a:hover::before {
+    width: 100%;
+}
+
+.img-blur{
+    position: absolute;
+    top: 0;
+    right: 80px;
+    width: 560px;
+    height: 100%;
+    background:transparent;
+    transition: 2s;
+    animation: manipactivehover 1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.img-blur::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: showright 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 2;
+}
+
+
+.img-blur:hover {
+    background: black;
+    opacity: .8;
+}
+
+@keyframes showright {
+   100% {
+    width: 0;
+   }
+}
+
+@keyframes manipactivehover{
+    100%{
+        pointer-events: auto;
+    }
+}
